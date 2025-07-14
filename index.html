@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BeatBox</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <header id="navbar">
+    <div class="logo">🎵 BeatBox</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#beats">Beats</a></li>
+        <li><a href="#about">About</a></li> <!-- ✅ Fixed this -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Home Section -->
+  <section id="home" class="hero">
+  <h1>Welcome to <span class="highlight">BeatBox</span></h1>
+  <p>Play your favorite beats and explore their origins!</p>
+
+  <!-- Song Images -->
+  <div class="song-images">
+    <img src="images/amaran.jpg" alt="Amaran Song" />
+    <img src="images/nanna.jpg" alt="Nanna Song" />
+    <img src="images/nijame.jpg" alt="Nijame Song" />
+  </div>
+
+  <!-- Move the Button INSIDE the hero section (below images) -->
+  <div class="explore-button">
+  <a href="#beats" class="cta-button">🎧 Try Beats</a>
+</div>
+</section>
+
+
+  <!-- ✅ Beats Section -->
+  <section id="beats">
+    <h2>🎶 Try Some Beats</h2>
+    <div class="beat-grid">
+      <button onclick="playSong('Amaran')">▶ Amaran</button>
+      <button onclick="playSong('Nanna')">▶ Nanna</button>
+      <button onclick="playSong('Nijame')">▶ Nijame</button>
+    </div>
+
+    <!-- 🎧 Music Player -->
+    <div id="playerContainer" class="player hidden">
+      <p>🎧 <strong>Now Playing:</strong> <span id="nowPlaying">None</span></p>
+      <p>🎬 Movie: <span id="movieTitle"></span><br>⭐ Rating: <span id="rating"></span></p>
+      <audio id="audioPlayer" controls></audio>
+    </div>
+  </section>
+
+  <!-- ✅ About Section -->
+  <section id="about">
+    <h2>About the Songs</h2>
+    <p>Each beat is a sample from a movie. Here's what you're listening to:</p>
+    <ul>
+      <li><strong>🎬 Amaran</strong> — Movie: <em>Amaran (2024)</em> — ⭐ Rating: 4.5/5</li>
+      <li><strong>🎬 Nanna</strong> — Movie: <em>Animal</em> — ⭐ Rating: 4.7/5</li>
+      <li><strong>🎬 Nijame</strong> — Movie: <em>Ooru Peru Bhairavakona</em> — ⭐ Rating: 4.2/5</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 BeatBox. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
